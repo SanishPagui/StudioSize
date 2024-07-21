@@ -27,7 +27,7 @@ export default function Page() {
           />
           </div>
           <div onClick={toggleMenu} className="cursor-pointer h-[80%]  flex flex-col justify-center items-center">
-            <div className={`w-8 h-8 bg-white my-1 duration-700 transform origin-top ${menuOpen?"rotate-[45deg] translate-y-1":"translate-y-0"}`}></div>
+            <div className={`w-8 h-8 bg-white my-1 duration-700 transform origin-top ${menuOpen?"rotate-[45deg] translate-y-0.5":"translate-y-0"}`}></div>
             <div className={`w-8 h-8 bg-white my-1 duration-700 transform origin-bottom ${menuOpen?"-rotate-[45deg] -translate-y-2":"translate-y-0"}`}></div>
           </div>
         </div>
