@@ -14,48 +14,35 @@ const MenuComponent = () => {
     };
     return (
     <>
-    <div className="navbar relative w-full h-16 flex items-center p-5 justify-between ">
-    <div className="cursor-pointer">
-      <Image 
+    <div className=" navbar w-full h-16 flex items-center justify-between ">
+      <div className="cursor-pointer p-5">
+      <Image
       src="/HeroLogo.svg"
       width={120}
       height={200}
       alt=""
       />
+      </div>
+      <div onClick={toggleMenu} className=" cursor-pointer w-[13%] h-[100%] flex flex-col justify-center items-center md:hidden">
+        <div className={` w-8 h-0.5 bg-white my-1 duration-700 transform ${menuOpen?"rotate-[45deg] translate-y-0.5":"translate-y-0"}`}></div>
+        <div className={` w-8 h-0.5 bg-white my-1 duration-700 transform ${menuOpen?"-rotate-[45deg] -translate-y-2":"translate-y-0"}`}></div>
+      </div>
+    
+    <div className={`fixed w-full h-full bg-black transform transition-opacity ease-in ${menuOpen?"opacity-100 translate-y-[55%] duration-[.2s]":"opacity-100 -translate-y-[60%] duration-200"}`} >
     </div>
-    <div onClick={toggleMenu} className="cursor-pointer h-[80%]  flex flex-col justify-center items-center">
-      <div className={`w-8 h-8 bg-white my-1 duration-700 transform origin-top ${menuOpen?"rotate-[45deg] translate-y-0.5":"translate-y-0"}`}></div>
-      <div className={`w-8 h-8 bg-white my-1 duration-700 transform origin-bottom ${menuOpen?"-rotate-[45deg] -translate-y-2":"translate-y-0"}`}></div>
-    </div>
-  </div>
-  <div className={`fixed duration-1000 w-full h-full bg-black transform transition-opacity ease-in ${menuOpen?"opacity-100":"opacity-0"}`} >
-  </div>
-  <div className={`fixed ease-in w-full  h-full transform ${menuOpen?"translate-y-[4%] duration-[.1s]":"translate-y-[100%] duration-[2.5s]"}`}>
-    <ul className={`p-4 transition-transform ${menuOpen?"-translate-y-5 duration-[1s]":"-translate-y-0 duration-[1s]"}`}>
-      <li><Link href='#' className={`block text-6xl font-bold text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1s]":"opacity-0 duration-[1.1s]"}`}>Home</Link></li>
-      <li><Link href='#' className={`block text-6xl font-bold text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.2s]":"opacity-0 duration-[1s]"}`}>Portfolio</Link></li>
-      <li><Link href='#' className={`block text-6xl font-bold text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.4s]":"opacity-0 duration-[.9s]"}`}>Studio</Link></li>
-      <li><Link href='#' className={`block text-6xl font-bold text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.6s]":"opacity-0 duration-[.8s]"}`}>Labs</Link></li>
-      <li><Link href='#' className={`block text-6xl font-bold text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.8s]":"opacity-0 duration-[.7s]"}`}>Contact</Link></li>
+    <div className={`fixed ease-in w-[50%] md:static md-flex md:translate-y-[32%] md:transition-none h-full transform ${menuOpen?"translate-y-[58%] duration-[.1s]":"translate-y-[150%] duration-[2.5s]"}`}>
+    <ul className={`p-4 md:static md:flex md:justify-end md md:h-16 md:items-center md:transition-none transition-transform ${menuOpen?"-translate-y-5 duration-[1s]":"-translate-y-0 duration-[1s]"}`}>
+      <div className='md:flex md:-translate-y-4'>
+      <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1s]":"opacity-0 duration-[.7s]"}`}>Home</Link></li>
+      <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.2s]":"opacity-0 duration-[.6s]"}`}>Portfolio</Link></li>
+      <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.4s]":"opacity-0 duration-[.5s]"}`}>Studio</Link></li>
+      <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.6s]":"opacity-0 duration-[.4s]"}`}>Labs</Link></li>
+      <li><Link href='#' className={`block md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.8s]":"opacity-0 duration-[.4s]"}`}>Contact</Link></li>
+      </div>
     </ul>
-  </div>
-      <div id="menufooter" className={`fixed top-[90%] ease-in-out w-full h-full transform ${menuOpen?"translate-y-0 duration-[1s]":"translate-y-[150%] duration-[4s]"}`}>
-        <div className={`p-2`}>
-        <ul className="grid grid-row-3 grid-cols-3">
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.4s]":"opacity-0 duration-[.7s]"}`}>Instagram</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.4s]":"opacity-0 duration-[.7s]"}`}>Vimeo</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.4s]":"opacity-0 duration-[.7s]"}`}>Savee.it</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.5s]":"opacity-0 duration-[.4s]"}`}>Behance</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.5s]":"opacity-0 duration-[.4s]"}`}>Youtube</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.5s]":"opacity-0 duration-[.4s]"}`}>Fonts in Use</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.6s]":"opacity-0 duration-[.3s]"}`}>Dribble</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.6s]":"opacity-0 duration-[.3s]"}`}>LinkedIn</Link></li>
-          <li><Link href='#' className={`block font-bold p-0.5 text-white transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[2.6s]":"opacity-0 duration-[.3s]"}`}>Pinterest</Link></li> 
-        </ul>
-        </div>
-    </div>
-
-      </>
+      </div>
+    </div>  
+    </>
   )
 }
 

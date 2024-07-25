@@ -5,6 +5,7 @@ export default function Page() {
   return (
     <div className="hero w-auto bg-black text-white h-dvh">
       <MenuComponent/>
+      
     </div>
   )
 }
