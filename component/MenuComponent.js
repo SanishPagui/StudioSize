@@ -14,11 +14,11 @@ const MenuComponent = () => {
     };
     return (
     <>
-    <div className=" navbar w-full h-16 flex items-center justify-between ">
+    <div className=" navbar w-full h-20 flex items-center justify-between ">
       <div className="cursor-pointer p-5">
       <Image
       src="/HeroLogo.svg"
-      width={120}
+      width={150}
       height={200}
       alt=""
       />
