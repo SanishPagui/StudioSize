@@ -1,39 +1,11 @@
 import React from 'react';
 
 const HeroText = () => {
-  const packaging = ['p', 'a', 'c', 'k', 'a', 'g', 'i', 'n', 'g'];
-  const motion = [ 'm','o','t','i','o','n'];
-  const naming = [ 'n','a','m','i','n','g'];
-  const branding = [ 'b','r','a','n','d','i','n','g'];
   return (
-    <div className="w-full h-[40%] flex flex-col justify-center pl-6">
-      <span className="text-7xl font-semibold">Design studio</span>
-      <span className="text-7xl font-semibold">for timeless</span>
-      <div className="flex font-semibold text-7xl">
-        <div className='fixed hidden'>
-        {packaging.map((item, index) => (
-          <span key={index} className="mr-1">{item}</span>
-        ))}
-        </div>
-        <div className='fixed hidden'>
-
-        {motion.map((item, index) => (
-          <span key={index} className="mr-1">{item}</span>
-        ))}
-        </ div>
-        <div className='fixed hidden'>
-
-        {naming.map((item, index) => (
-          <span key={index} className="mr-1">{item}</span>
-        ))}
-        </div>
-        <div className='fixed hidden'>
-
-        {branding.map((item, index) => (
-          <span key={index} className="mr-1">{item}</span>
-        ))}
-        </div>
-      </div>
+    <div className="w-full h-[40%] text-7xl md:text-6xl flex flex-col md:h-[25%] tracking-tighter xl:text-8xl xl:h-[45%] lg:pl-12 lg:text-7xl lg:h-[35%] justify-center pl-6">
+      <span className=" font-semibold mt-16 md:mt-4 lg:mt-16">Design studio</span>
+      <span className=" font-semibold">for timeless</span>
+      <span className=" font-semibold">branding</span>
     </div>
   );
 };
