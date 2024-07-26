@@ -32,7 +32,7 @@ const MenuComponent = () => {
     </div>
     <div className={`fixed ease-in w-[50%] md:static md-flex md:translate-y-[32%] md:transition-none h-full transform ${menuOpen?"translate-y-[58%] duration-[.1s]":"translate-y-[150%] duration-[2.5s]"}`}>
     <ul className={`p-4 md:static md:flex md:justify-end md:opacity-100 md:h-16 md:items-center md:transition-none transition-transform ${menuOpen?"-translate-y-5 duration-[1s]":"-translate-y-0 duration-[1s]"}`}>
-      <div className={`md:flex min-[766px]:opacity-0 max-[770px]:opacity-0 md:opacity-100 md:-translate-y-4`}>
+      <div className={`md:flex md:-translate-y-4`}>
       <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1s]":"opacity-0 duration-[.5s]"}`}>Home</Link></li>
       <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.2s]":"opacity-0 duration-[.4s]"}`}>Portfolio</Link></li>
       <li><Link href='#' className={`block pr-4 md:transition-none md:hover:underline text-6xl md:text-lg lg:text-xl font-bold text-white md:opacity-100 transform ease-in transition-opacity ${menuOpen?"opacity-100 duration-[1.4s]":"opacity-0 duration-[.3s]"}`}>Studio</Link></li>
