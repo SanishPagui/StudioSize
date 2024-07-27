@@ -14,7 +14,7 @@ const MenuComponent = () => {
     };
     return (
     <>
-    <div className=" navbar w-full h-20 md:h-32 flex flex-wrap items-center justify-between ">
+    <div className=" navbar w-full  h-20 md:h-32 flex flex-wrap items-center justify-between ">
       <div className=" p-5 lg:p-12">
       <Image className='cursor-pointer '
       src="/HeroLogo.svg"
