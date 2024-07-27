@@ -28,7 +28,7 @@ const MenuComponent = () => {
         <div className={` w-8 h-0.5 bg-white my-1 duration-700 transform ${menuOpen?"-rotate-[45deg] -translate-y-2":"translate-y-0"}`}></div>
       </div>
     
-    <div className={`fixed w-full h-full bg-black transform transition-opacity ease-in ${menuOpen?"opacity-100 translate-y-[55%] duration-[.2s]":"opacity-0 translate-y-[60%] duration-[3s]"}`} >
+    <div className={`fixed w-full h-full bg-black transform transition-opacity ease-in ${menuOpen?"opacity-100 translate-y-[55%] duration-[.2s]":"opacity-0 translate-y-[60%] duration-[2.5s]"}`} >
     </div>
     <div className={`fixed ease-in w-[50%] md:static md-flex md:translate-y-[32%] md:transition-none h-full transform ${menuOpen?"translate-y-[58%] duration-[.1s]":"translate-y-[150%] duration-[2.5s]"}`}>
     <ul className={`p-4 md:static md:flex md:justify-end md:opacity-100 md:h-16 md:items-center md:transition-none transition-transform ${menuOpen?"-translate-y-5 duration-[1s]":"-translate-y-0 duration-[1s]"}`}>
