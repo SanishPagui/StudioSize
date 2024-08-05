@@ -14,21 +14,21 @@ const MenuComponent = () => {
     };
     return (
     <>
-    <div className="fixed navbar w-full  h-20 md:h-32 flex flex-wrap items-center justify-between ">
-      <div className=" p-5 lg:p-12">
-      <Image className='cursor-pointer '
+    <div className="fixed navbar bg-black w-full  h-20 md:h-32 flex flex-wrap items-center justify-between ">
+      <div className=" p-5 z-50 lg:p-12">
+      <Image className='z-50 cursor-pointer '
       src="/HeroLogo.svg"
       width={150}
       height={200}
       alt=""
       />
       </div>
-      <div onClick={toggleMenu} className=" cursor-pointer w-[13%] h-[100%] flex flex-col justify-center items-center md:hidden">
+      <div onClick={toggleMenu} className="z-50 cursor-pointer w-[13%] h-[100%] flex flex-col justify-center items-center md:hidden">
         <div className={` w-8 h-0.5 bg-white my-1 duration-700 transform ${menuOpen?"rotate-[45deg] translate-y-0.5":"translate-y-0"}`}></div>
         <div className={` w-8 h-0.5 bg-white my-1 duration-700 transform ${menuOpen?"-rotate-[45deg] -translate-y-2":"translate-y-0"}`}></div>
       </div>
     
-    <div className={`fixed z-50 w-full h-full bg-black transform transition-opacity ease-in ${menuOpen?"opacity-100 translate-y-[55%] duration-[.2s]":"opacity-0 translate-y-[60%] duration-[2.5s]"}`} >
+    <div className={`fixed z-40 w-full h-full bg-black transform transition-opacity ease-in ${menuOpen?"opacity-100 translate-y-[48%] duration-[.2s]":"opacity-0 translate-y-[60%] duration-[1.7s]"}`} >
     </div>
     <div className={`fixed z-50 ease-in w-[50%] md:static md-flex md:translate-y-[32%] md:transition-none h-full transform ${menuOpen?"translate-y-[58%] duration-[.1s]":"translate-y-[150%] duration-[2.5s]"}`}>
     <ul className={`p-4 md:static md:flex md:justify-end md:opacity-100 md:h-16 md:items-center md:transition-none transition-transform ${menuOpen?"-translate-y-5 duration-[1s]":"-translate-y-0 duration-[1s]"}`}>

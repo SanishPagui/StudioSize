@@ -2,8 +2,9 @@
 import React from 'react'
 import MenuComponent from './component/MenuComponent'
 import HeroText from '@app/HeroText'
-import MainVideo from '@app/MainVideo'
+import MainVideo from './component/MainVideo'
 import FeaturedWorks from './component/FeaturedWorks'
+import Cards from './component/Cards'
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <HeroText/>
       <MainVideo/>
       <FeaturedWorks/>
+      <Cards/>
     </div>
   )
 }
