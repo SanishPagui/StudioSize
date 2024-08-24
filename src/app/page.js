@@ -5,6 +5,7 @@ import HeroText from '@app/HeroText'
 import MainVideo from './component/MainVideo'
 import FeaturedWorks from './component/FeaturedWorks'
 import Cards from './component/Cards'
+import AfterCard from './component/AfterCard'
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <MainVideo/>
       <FeaturedWorks/>
       <Cards/>
+      <AfterCard/>
     </div>
   )
 }
