@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 const MainVideo = ({menuOpen}) => {
   return (
-    <div className='z-10 mt-4 w-full bg-black'>
+    <div className='z-10 mt-20 md:mt-4 w-full bg-black'>
       <video 
             src={'/video/HeaderVideo.mp4'} 
             autoPlay
