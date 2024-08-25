@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cards = () => {
   return (
-    <div className='z-20 w-full h-fit no-scrollbar bg-black overflow-x-auto pl-7'>
+    <div className='z-20 w-full h-fit no-scrollbar bg-black overflow-x-auto pl-4'>
       <div className='w-fit flex flex-cols space-x-[1vw] mt-[13vw] md:mt-[5vw]'>
         <div className='w-[37vh] md:w-[28vw] lg:w-[36vw]'>
         <video
@@ -10,7 +10,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -27,7 +27,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -44,7 +44,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -61,7 +61,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -78,7 +78,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -95,7 +95,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -112,7 +112,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -129,7 +129,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -146,7 +146,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -163,7 +163,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>
@@ -180,7 +180,7 @@ const Cards = () => {
           loop
           autoPlay
           muted
-          className='xl:w-[50vw] rounded-xl'
+          className='xl:w-[50vw] rounded-lg lg:rounderd-sm'
         />
         <div className='z-10 text-2xl md:text-[2vw] mt-2'>
             <div className='font-bold'>

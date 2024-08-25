@@ -6,6 +6,7 @@ import MainVideo from './component/MainVideo'
 import FeaturedWorks from './component/FeaturedWorks'
 import Cards from './component/Cards'
 import AfterCard from './component/AfterCard'
+import HoverText from './component/HoverText'
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <FeaturedWorks/>
       <Cards/>
       <AfterCard/>
+      <HoverText/>
     </div>
   )
 }

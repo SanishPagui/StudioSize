@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 const MainVideo = ({menuOpen}) => {
   return (
-    <div className='z-10 mt-20 md:mt-4 w-full bg-black'>
+    <div className='z-10 mt-[30vw] sm:mt-[0vw] md:mt-4 w-full bg-black'>
       <video 
             src={'/video/HeaderVideo.mp4'} 
             autoPlay
             loop 
             muted 
-            className='w-full object-cover'
+            className='w-full h-[85vw] sm:h-fit object-cover'
           >
       </video>
       <div className='z-10'>
