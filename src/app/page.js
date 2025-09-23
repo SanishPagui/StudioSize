@@ -1,5 +1,5 @@
 "use client"
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import MenuComponent from './component/MenuComponent'
 import HeroText from '@app/HeroText'
 import MainVideo from './component/MainVideo'
@@ -9,40 +9,56 @@ import AfterCard from './component/AfterCard'
 import HoverText from './component/HoverText'
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import { ReactLenis, useLenis } from 'lenis/react'
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
+
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Page() {
-  useEffect(()=>{
-    const lenis=new Lenis({
-      duration: 2,
-      easing:(t)=>Math.min(1,1.001-Math.pow(2,-10*t)),
-      smooth:true,
-      direction:'vertical',
-      gestureDirection:'vertical',
+  useEffect(() => {
+    // Initialize Lenis with optimized settings
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
       smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
     })
-    function raf(time){
+
+    // Animation frame function
+    function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-    return()=>{
+
+    // Sync GSAP ScrollTrigger with Lenis
+    lenis.on('scroll', ScrollTrigger.update)
+    
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
+    
+    gsap.ticker.lagSmoothing(0)
+
+    return () => {
       lenis.destroy()
+      gsap.ticker.remove(() => {})
     }
-  })
+  }, [])
+
   return (
-    <div id='smooth-wrapper' className="hero w-auto bg-black text-white h-dvh">
-      <div id='smooth-content'>
-        <MenuComponent/>
-        <HeroText/>
-        <MainVideo/>
-        <FeaturedWorks/>
-        <Cards/>
-        <AfterCard/>
-        <HoverText/>
-      </div>
+    <div className="bg-black text-white min-h-screen overflow-x-hidden">
+      <MenuComponent />
+      <HeroText />
+      <MainVideo />
+      <FeaturedWorks />
+      <Cards />
+      <AfterCard />
+      <HoverText />
     </div>
   )
 }
